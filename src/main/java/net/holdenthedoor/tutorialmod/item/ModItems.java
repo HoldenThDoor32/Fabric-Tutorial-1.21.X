@@ -12,6 +12,8 @@ public class ModItems {
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()));
     public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item(new Item.Settings()));
 
+    public static final Item CAULIFLOWER = registerItem("cauliflower", new Item(new Item.Settings().food(ModFoodComponents.CAULIFLOWER)));
+    public static final Item EMERALD_APPLE = registerItem("emerald_apple", new Item(new Item.Settings().food(ModFoodComponents.EMERALD_APPLE)));
 
 
     private static Item registerItem(String name, Item item) {
@@ -24,6 +26,8 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(PINK_GARNET);
             entries.add(RAW_PINK_GARNET);
+            entries.add(CAULIFLOWER);
+            entries.add(EMERALD_APPLE);
         });
     }
 }

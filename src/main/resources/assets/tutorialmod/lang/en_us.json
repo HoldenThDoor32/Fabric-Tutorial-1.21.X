@@ -9,5 +9,12 @@
   "block.tutorialmod.deepslate_pink_garnet_ore": "Deepslate Pink Garnet Ore",
 
   "item.tutorialmod.cauliflower": "Cauliflower",
-  "item.tutorialmod.emerald_apple": "Emerald Apple"
+  "item.tutorialmod.cauliflower_seeds": "Cauliflower Seeds",
+
+  "item.tutorialmod.emerald_apple": "Emerald Apple",
+
+  "item.tutorialmod.nether_star_dust": "Nether Star Dust",
+
+  "item.tutorialmod.cauliflower_crop": "Cauliflower Crop",
+  "item.tutorialmod.cauliflower_seeds": "Cauliflower Seeds"
 }

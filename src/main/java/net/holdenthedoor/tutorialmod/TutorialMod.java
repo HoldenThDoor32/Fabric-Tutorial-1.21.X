@@ -2,6 +2,7 @@ package net.holdenthedoor.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.holdenthedoor.tutorialmod.block.ModBlocks;
 import net.holdenthedoor.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
@@ -15,5 +16,7 @@ public class TutorialMod implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		FuelRegistry.INSTANCE.add(ModItems.NETHER_STAR_DUST, 32000);
 	}
 }

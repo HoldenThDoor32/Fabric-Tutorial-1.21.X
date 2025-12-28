@@ -2,10 +2,12 @@ package net.holdenthedoor.tutorialmod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.holdenthedoor.tutorialmod.TutorialMod;
+import net.holdenthedoor.tutorialmod.block.custom.CauliflowerCropBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -59,7 +61,23 @@ public class ModBlocks {
             )
     );
 
+    public static final Block CAULIFLOWER_CROP = registerBlockWithoutItem(
+            "cauliflower_block", new CauliflowerCropBlock(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)
 
+    ));
+
+
+
+    //registers the block into the system while not registering an item along with it, such as a crop.
+    private static Block registerBlockWithoutItem(String name, Block block) {
+        return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, name), block);
+    }
 
     //registers the block into the system
     private static Block registerBlock(String name, Block block) {
